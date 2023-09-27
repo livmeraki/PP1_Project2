@@ -6,24 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stylesheet 2</title>
     <style>
-        .wrapper {
-            display: flex;
+        body {
+            font: 100% Helvetica;
+            margin: 10px;
+            line-height: 26px;
+            background-color: #24263b;
+            color: #dddddd; 
+            padding: 30px;
         }
-        
-        .wrapper > div {
-            flex: 1;
+
+        #top {
+
+            padding: 15px;
+
+        }
+        #middle {
+            background-color: #434558;
+            padding: 30px;
+            color: #dddddd; 
+        }
+        #menu {
+            background-color: #5a5d74;
+            padding: 30px;
+            color: #dddddd; 
+        }
+        #end {
+            background-color: #33354b;
+            padding: 30px;
+            color: #dddddd; 
+        }
+        #menu {
+
         }
     </style>
 </head>
 
 <body>
-    <div>
+    <div id="top">
         <h1>Welcome to 22200299's Homepage!</h1>
         <p>Use the menu to select different Stylesheets</p>
     </div>
 
-    <div class="wrapper">
-        <div>
+    <div id="middle">
+        <div id="menu">
+            <h4>MENU</h4>
             <ul>
                 <li><a href="./style1.html">Stylesheet 1</a><br></li>
                 <li><a href="./style2.html">Stylesheet 2</a><br></li>
@@ -33,7 +59,7 @@
 
         <div>
             <h1>Same Page Different Stylesheets</h1>
-        
+
             This is a demonstration of how different stylesheets
             can change the layout of your HTML page. You can change
             the layout of this page by selecting different
@@ -44,12 +70,13 @@
             <a href="./nostyle.html">No Stylesheet</a>
 
             <h2>No Styles</h2>
-            This page uses DIV elements to group different sections of the 
-            HTML page. Click here to see how the page looks like with no 
+            This page uses DIV elements to group different sections of the
+            HTML page. Click here to see how the page looks like with no
             stylesheet: <br>
             <a href="./nostyle.html">No Stylesheet</a>
         </div>
         <div>
+            <hr>
             <h3>Side-Bar</h3>
             <p>
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
@@ -57,8 +84,14 @@
                 magna aliquam erat volutpat.
             </p>
         </div>
+
     </div>
     <div>
+        <br>
+    </div>
+
+    <div id="end">
+        <a href="./index.html">Go Back Home</a><br>
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
         sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
         aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
