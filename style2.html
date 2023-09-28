@@ -7,57 +7,116 @@
     <title>Stylesheet 2</title>
     <style>
         body {
-            font: 100% Helvetica;
-            margin: 10px;
+            font: 100% Courier New;
+            margin: 20px;
             line-height: 26px;
-            background-color: #24263b;
-            color: #dddddd; 
-            padding: 30px;
+            background-color: #000000;
+        }
+
+        .container {
+            xmin-width: 900px;
+        }
+
+        .wrapper {
+            position: relative;
+            overflow: auto;
         }
 
         #top {
-
+            color: #84c754;
             padding: 15px;
+        }
+
+        #main {
+            padding: 10px;
+            color: #84c754;
+        }
+
+        #sidebar {
+            color: #ffffff;
+            border: 1px solid #ffffff;
+            border-radius: 4px;
+            padding: 10px;
+            width: 320px;
+            top: 0;
+            right: 0;
+            position: absolute;
+            font-size: 80%;
+            line-height: 20px;
+        }
+
+        #bottom {
+            border: 1px solid #ffffff;
+            border-radius: 4px;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            font-size: 70%;
+            line-height: 14px;
+        }
+
+        #top h1,
+        #top p {
+            margin: 0;
+        }
+
+        #menulink {
+            text-decoration: none !important;
 
         }
-        #middle {
-            background-color: #434558;
-            padding: 30px;
-            color: #dddddd; 
-        }
-        #menu {
-            background-color: #5a5d74;
-            padding: 30px;
-            color: #dddddd; 
-        }
-        #end {
-            background-color: #33354b;
-            padding: 30px;
-            color: #dddddd; 
-        }
-        #menu {
 
+        .menuitem {
+            color: #84c754;
+            cursor: pointer;
+
+        }
+
+        .menuitem:nth-child(2) {
+            color: white;
+            font-weight: bold;
+        }
+
+        .menuitem:hover {
+            color: #ffffff;
+        }
+
+        #link {
+            color: #ffffff;
+        }
+
+        a:hover {
+            color: #84c754;
+        }
+
+        @media (max-width: 600px) {
+            #sidebar {
+                width: auto;
+                margin-bottom: 10px;
+                position: relative;
+            }
         }
     </style>
 </head>
 
 <body>
     <div id="top">
-        <h1>Welcome to 22200299's Homepage!</h1>
-        <p>Use the menu to select different Stylesheets</p>
+        <h1 id="top h1">Welcome to 22200299's Homepage!</h1>
+        <p id="top p">Use the menu to select different Stylesheets</p>
     </div>
 
-    <div id="middle">
-        <div id="menu">
-            <h4>MENU</h4>
+    <div class="wrapper">
+        <div id="menubar">
             <ul>
-                <li><a href="./style1.html">Stylesheet 1</a><br></li>
-                <li><a href="./style2.html">Stylesheet 2</a><br></li>
-                <li><a href="./nostyle.html">No Stylesheet</a><br></li>
+                <li class="menuitem"><a href="./style1.html" id="menulink" class="menuitem">Stylesheet 1</a><br></li>
+                <li class="menuitem"><a href="./style2.html" style="text-decoration: none !important;"
+                        class="menuitem">Stylesheet 2</a><br></li>
+                <li class="menuitem"><a href="./nostyle.html" id="menulink" class="menuitem">No Stylesheet</a><br></li>
             </ul>
+            <br>
+            <br>
         </div>
 
-        <div>
+        <div id="main">
             <h1>Same Page Different Stylesheets</h1>
 
             This is a demonstration of how different stylesheets
@@ -65,18 +124,17 @@
             the layout of this page by selecting different
             stylesheets in the menu, or by selecting one of the
             following links: <br>
-            <a href="./style1.html">Stylesheet 1</a>,
-            <a href="./style2.html">Stylesheet 2</a>,
-            <a href="./nostyle.html">No Stylesheet</a>
+            <a href="./style1.html" id="link">Stylesheet1</a>,
+            <a href="./style2.html" id="link">Stylesheet2</a>,
+            <a href="./nostyle.html" id="link">No Stylesheet</a>
 
             <h2>No Styles</h2>
             This page uses DIV elements to group different sections of the
             HTML page. Click here to see how the page looks like with no
             stylesheet: <br>
-            <a href="./nostyle.html">No Stylesheet</a>
+            <a href="./nostyle.html" id="link">No Stylesheet</a>
         </div>
-        <div>
-            <hr>
+        <div id="sidebar">
             <h3>Side-Bar</h3>
             <p>
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
@@ -85,13 +143,14 @@
             </p>
         </div>
 
+
     </div>
+
     <div>
         <br>
     </div>
 
-    <div id="end">
-        <a href="./index.html">Go Back Home</a><br>
+    <div id="bottom">
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
         sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
         aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
@@ -101,6 +160,8 @@
         nulla facilisis at vero eros et accumsan et iusto odio dignissim qui
         blandit praesent luptatum zzril delenit augue duis dolore te feugait
         nulla facilisi.
+        <br>
+        <a href="./index.html" id="link">Go Back Home</a>
     </div>
 </body>
 

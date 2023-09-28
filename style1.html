@@ -11,70 +11,77 @@
             background-color: #d14836;
             line-height: 20px;
         }
-        
+
         .container {
             xmin-width: 900px;
         }
-        
+
         .wrapper {
             position: relative;
             overflow: auto;
         }
-        
+
         #top {
             color: #ffffff;
             padding: 15px;
             font-size: 30px;
-            line-height: 26px;    
+            line-height: 26px;
         }
-        
+
         #top h1 {
-            margin:0;
+            margin: 0;
             line-height: 50px;
         }
-        
+
         #menubar {
             width: 190px;
             float: right;
         }
-        
+
+        #menulink {
+            color: #FFFFFF;
+            text-decoration: none !important;
+        }
+
         #main {
             padding: 10px;
             background-color: #ffffff;
             font: 80% Verdana;
         }
-        
-        #main h1, #main h2 {
+
+        #main h1,
+        #main h2 {
             color: #d14836;
         }
-        
+
         #sidebar {
             background-color: #F6DAD7;
             color: #d14836;
             padding: 10px;
         }
-        
+
         #bottom {
             text-align: center;
             padding: 10px;
             font-size: 70%;
             color: #ffffff;
         }
-        
+
         #menulist {
-            padding:0;
+            padding: 0;
             font: 16px verdana;
         }
-        
-        
-        a {
+
+
+        #link {
             color: #d14836;
             text-decoration: none;
         }
-        
+
         a:hover {
             text-decoration: underline;
         }
+
         .menuitem {
             width: 155px;
             background-color: #d14836;
@@ -87,19 +94,18 @@
             text-align: center;
             cursor: pointer;
         }
-        
-        .menuitem:nth-child(2) {
-           background-color:white;
-           color: #d14836;
-           font-weight:bold;
+
+        .menuitem:nth-child(1) {
+            background-color: white;
+            color: #d14836;
+            font-weight: bold;
         }
-        
+
         .menuitem:hover {
             background-color: #ffffff;
             color: #d14836;
         }
-        
-        </style>
+    </style>
 </head>
 
 <body>
@@ -111,29 +117,29 @@
     <div id="main">
         <div id="menubar">
             <ul id="menulist">
-                <li class="menuitem"><a href="./style1.html">Stylesheet 1</a><br></li>
-                <li class="menuitem"><a href="./style2.html">Stylesheet 2</a><br></li>
-                <li class="menuitem"><a href="./nostyle.html">No Stylesheet</a><br></li>
+                <li class="menuitem"><a href="./style1.html" style="text-decoration: none !important;">Stylesheet 1</a><br></li>
+                <li class="menuitem"><a href="./style2.html" id="menulink">Stylesheet 2</a><br></li>
+                <li class="menuitem"><a href="./nostyle.html" id="menulink">No Stylesheet</a><br></li>
             </ul>
         </div>
 
         <div>
             <h1 id="main h1">Same Page Different Stylesheets</h1>
-        
+
             This is a demonstration of how different stylesheets
             can change the layout of your HTML page. You can change
             the layout of this page by selecting different
             stylesheets in the menu, or by selecting one of the
             following links: <br>
-            <a href="./style1.html">Stylesheet 1</a>,
-            <a href="./style2.html">Stylesheet 2</a>,
-            <a href="./nostyle.html">No Stylesheet</a>
+            <a href="./style1.html" id="link">Stylesheet 1</a>,
+            <a href="./style2.html" id="link">Stylesheet 2</a>,
+            <a href="./nostyle.html" id="link">No Stylesheet</a>
 
             <h2 id="main h2">No Styles</h2>
-            This page uses DIV elements to group different sections of the 
-            HTML page. Click here to see how the page looks like with no 
+            This page uses DIV elements to group different sections of the
+            HTML page. Click here to see how the page looks like with no
             stylesheet: <br>
-            <a href="./nostyle.html">No Stylesheet</a>
+            <a href="./nostyle.html" id="link">No Stylesheet</a>
         </div>
     </div>
     <div id="sidebar">
@@ -145,7 +151,7 @@
         </p>
     </div>
     <div id="bottom">
-        <a href="./index.html">Go Back Home</a><br>
+        
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
         sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
         aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
@@ -155,6 +161,9 @@
         nulla facilisis at vero eros et accumsan et iusto odio dignissim qui
         blandit praesent luptatum zzril delenit augue duis dolore te feugait
         nulla facilisi.
+        <br>
+        <a href="./index.html" style="text-decoration: none !important;">Go Back Home</a>
+
     </div>
 </body>
 
